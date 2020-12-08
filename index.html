@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer</title>
+</head>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+
+    function emitButton(p) {
+        socket.emit('click', "button " + p);
+    }
+</script>
+
+<body>
+    <h1>This is index.html</h1>
+    <button onclick="emitButton(1)">Button 1</button>
+    <button onclick="emitButton(2)">Button 1</button>
+</body>
+
+</html>
